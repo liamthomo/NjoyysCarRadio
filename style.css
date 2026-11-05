@@ -1,0 +1,174 @@
+:root {
+    color-scheme: dark;
+    font-family: Inter, "Segoe UI", sans-serif;
+    background: transparent;
+    color: #f3f5f8;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+
+body.visible {
+    display: flex;
+}
+
+.panel {
+    width: min(460px, calc(100vw - 32px));
+    padding: 26px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    background: #141a23;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.48);
+}
+
+header,
+.input-row,
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+header {
+    margin-bottom: 24px;
+}
+
+.eyebrow {
+    margin: 0 0 5px;
+    color: #8d9aac;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 650;
+}
+
+button,
+input {
+    font: inherit;
+}
+
+button {
+    min-height: 42px;
+    padding: 0 17px;
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 650;
+    cursor: pointer;
+}
+
+button:focus-visible,
+input:focus-visible {
+    outline: 2px solid #78a8ff;
+    outline-offset: 2px;
+}
+
+.icon-button {
+    min-width: 38px;
+    min-height: 38px;
+    padding: 0;
+    background: #252d39;
+    color: #c5ceda;
+    font-size: 25px;
+}
+
+form label,
+.volume-control span {
+    display: block;
+    margin-bottom: 8px;
+    color: #c4ccd7;
+    font-size: 13px;
+}
+
+.input-row input {
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid #344050;
+    border-radius: 8px;
+    background: #0e131a;
+    color: #f3f5f8;
+}
+
+.input-row input::placeholder {
+    color: #778395;
+}
+
+.primary {
+    flex: 0 0 auto;
+    background: #3978e8;
+}
+
+.secondary {
+    background: #293341;
+    color: #d6deea;
+}
+
+.controls {
+    margin-top: 18px;
+}
+
+.volume-control {
+    flex: 1;
+    min-width: 130px;
+}
+
+.volume-control span {
+    margin-bottom: 5px;
+}
+
+.volume-control input {
+    width: 100%;
+    accent-color: #5890f5;
+}
+
+#status {
+    min-height: 18px;
+    margin: 18px 0 0;
+    color: #96a2b2;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+#player {
+    position: fixed;
+    top: -220px;
+    left: -220px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@media (max-width: 420px) {
+    .panel {
+        padding: 20px;
+    }
+
+    .controls {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .volume-control {
+        width: 100%;
+    }
+}
