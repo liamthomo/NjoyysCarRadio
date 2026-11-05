@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Car Radio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="panel" class="panel" aria-label="Car radio">
+        <header>
+            <div>
+                <p class="eyebrow">IN-CAR AUDIO</p>
+                <h1>Car Radio</h1>
+            </div>
+            <button id="close" class="icon-button" aria-label="Close">×</button>
+        </header>
+
+        <form id="radio-form">
+            <label for="youtube-url">YouTube video link</label>
+            <div class="input-row">
+                <input id="youtube-url" type="url" placeholder="https://youtu.be/..." autocomplete="off" required>
+                <button class="primary" type="submit">Play</button>
+            </div>
+        </form>
+
+        <div class="controls">
+            <button id="stop" class="secondary" type="button">Stop radio</button>
+            <label class="volume-control" for="volume">
+                <span>Local volume</span>
+                <input id="volume" type="range" min="0" max="100" value="100">
+            </label>
+        </div>
+        <p id="status" role="status">Only the driver can change the station. Nearby players can hear it.</p>
+        <div id="player" aria-hidden="true"></div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>
